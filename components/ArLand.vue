@@ -1,0 +1,67 @@
+<template>
+  <div class="clr-mono1 medium-normal-text wrapper2">
+    <div class="item item1">
+      <div class="quote clr-green2 prg2">AR-Ляндия</div>
+
+      <div class="prg2">Это командная игра, которая может быть выстроена в нескольких режимах.</div>
+
+      <div
+        class="prg2"
+      >Это детская стратегическая настольная игра. Детям предлагается выступить в роли урбанистов и спроектировать городскую среду. В ходе игры они могут анализировать предпочтения горожан, их поведение, и на основе этого делать предположение о том как следует застроить город.</div>
+
+      <div class="prg2">
+        <div class="highlight clr-green2 prg4">Какие навыки будут развиты</div>
+        <ul>
+          <li class="star">Инженерное мышление</li>
+          <li class="star">Командная работа</li>
+        </ul>
+      </div>
+
+      <div class="prg2">
+        <img src="../assets/png/ar-land.png" class="d-block w-100" alt="арляндия" />
+      </div>
+    </div>
+
+    <div class="item item2">
+      <div class="highlight clr-green2 prg2">На кого рассчитан проект</div>
+
+      <div class="prg2">
+        <div class="big-normal-text clr-green1 prg4">Режим Соревнования</div>
+        <div>Участники делятся на две-три команды. У каждой команды есть свое игровое поле. За четыре часа комагдам нужно спроектировать городскую среду, основываясь на предпочтениях граждан. Важно отметить, что горожане могут сами выбирать в каком городе им находится и всегда могут переехать в город противника. Побеждает команда с наибольшими показателями счастья и численности города.</div>
+      </div>
+
+      <div>
+        <div class="big-normal-text clr-green1 prg3">Образовательный Режим</div>
+
+        <div
+          class="prg4"
+        >AR-Ляндия - это еще и инженерный тренажер включающий в себя три образовательных курса:</div>
+
+        <ul class="prg3">
+          <li class="star">Урбанистика</li>
+          <li class="star">Анализ данных</li>
+          <li class="star">3D-проектирование</li>
+        </ul>
+
+        <div>Курсы делять по степени сложности и позволяют подключать детей от 5го до 11го классов.</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  grid-gap: 20px;
+}
+.item {
+  text-align: left;
+}
+/*
+.star {
+  content: url("../assets/svg/star-green.svg");
+  height: 4em;
+  width: 4em;
+}*/
+</style>
