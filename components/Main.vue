@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper0">
     <div class="item item1">
-      <div class="quote clr-purple2 prg2">О НАС</div>
-      <div class="medium-normal-text clr-mono1">
+      <div class="quote clr-purple2 prg2 prg">О НАС</div>
+      <div class="medium-normal-text clr-mono1 prg">
         Мы команда энтузиастов из Сибири. Цель нашей
         компании - ломать границы между мирами,
         разрабатывая новые подходы, на базе технологий
@@ -10,10 +10,12 @@
       </div>
     </div>
     <div class="item item2 bg">
-      <Idea />
-      <ContactsInline />
       <div class="mask humans">
         <Team />
+      </div>
+      <div class="premask">
+        <Idea />
+        <ContactsInline />
       </div>
     </div>
   </div>
@@ -30,21 +32,40 @@ export default {};
   align-items: center;
   @include inherit;
   @include gridable;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+.item1{
+  padding-bottom: 200px;
 }
 
+.item2 {
+  @include gridable;
+  @include inherit;
+  grid-auto-columns: 1;
+  grid-auto-rows: 2;
+}
 .bg {
   background-image: url("../assets/png/layouts/layout2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  @include inherit;
-  width: 100%;
+  
   &:hover {
     animation: grow 3000ms ease;
   }
 }
+.premask {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
 .mask {
   @include inherit;
+  display: flex;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-bottom: auto;
+  margin-top: auto;
   opacity: 0;
   &:hover {
     height: 100%;

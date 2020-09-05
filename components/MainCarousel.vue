@@ -55,6 +55,7 @@ export default {
 
 .carousel {
   @include inherit;
+  margin-top: 5rem;
 }
 .carousel-control-prev,
 .carousel-control-next {

@@ -1,6 +1,6 @@
 <template>
   <div>
-   <Main class="bclr-mono3" />
+   <MainCarousel class="bclr-mono3" />
   </div>
 </template>
 

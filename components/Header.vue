@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="bclr-mono3">
     <img class="logo" src="../assets/svg/logo.svg" alt="LOGO" />
 
     <nav>
@@ -27,34 +27,6 @@
           <a class="nav-link clr-mono1" href="#contacts">КОНТАКТЫ</a>
         </li>
       </ul>
-      <!--<div id="navbar-example2" class="head bclr-mono3 navbar-size">
-          <ul class="nav nav-pills header clr-mono1">
-            <li class="nav-item">
-              <nuxt-link class="nav-link clr-mono1" to="#aboutus">О НАС</nuxt-link>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle clr-mono1"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >ПРОДУКТЫ</a>
-              <div class="dropdown-menu medium-normal-text">
-                <a class="dropdown-item" href="#arstand">AR-Stand</a>
-                <a class="dropdown-item" href="#arland">AR-Land</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#virtual">Виртуализация Игр</a>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link clr-mono1" href="#contacts">КОНТАКТЫ</a>
-            </li>
-          </ul>
-      </div>-->
     </nav>
   </header>
 </template>
@@ -80,14 +52,15 @@ max-width: auto;
 header {
   display: flex;
   top: 0;
-  position: sticky;
+  position: fixed;
   height: 5rem;
 
   justify-content: space-between;
   align-items: center;
   text-align: center;
 
-  max-width: 1170px;
+  max-width: 100vw;
+  width: -webkit-fill-available;
   min-width: auto;
 }
 .logo {
