@@ -1,5 +1,5 @@
 <template>
-  <div class="clr-mono1 medium-normal-text wrapper2">
+  <div class="clr-mono1 medium-normal-text wrapper">
     <div class="item item1">
       <div class="quote clr-red2 prg2">Виртуализация игр</div>
 
@@ -31,11 +31,14 @@
   </div>
 </template>
 
-<style>
-.wrapper2 {
+<style lang="scss" scoped>
+@import "/css/vars";
+
+.wrapper {
   display: grid;
   grid-template-columns: repeat(2, 6fr);
   grid-gap: 20px;
+  @include inherit;
 }
 .item {
   text-align: left;

@@ -1,5 +1,5 @@
 <template>
-  <div class="clr-mono1 medium-normal-text wrapper2">
+  <div class="clr-mono1 medium-normal-text wrapper">
     <div class="item item1">
       <div class="quote clr-green2 prg2">AR-Ляндия</div>
 
@@ -17,7 +17,7 @@
         </ul>
       </div>
 
-      <div class="prg2">
+      <div class="prg2 img-props">
         <img src="../assets/png/ar-land.png" class="d-block w-100" alt="арляндия" />
       </div>
     </div>
@@ -49,14 +49,21 @@
   </div>
 </template>
 
-<style>
-.wrapper2 {
+<style lang="scss" scoped>
+@import "/css/vars";
+
+.wrapper {
   display: grid;
   grid-template-columns: repeat(2, 6fr);
   grid-gap: 20px;
+  align-items: center;
+  @include inherit;
 }
 .item {
   text-align: left;
+}
+.img-props {
+  padding: 0 3rem;
 }
 /*
 .star {

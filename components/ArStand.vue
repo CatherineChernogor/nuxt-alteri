@@ -1,8 +1,8 @@
 <template>
-  <div class="clr-mono1 medium-normal-text wrapper1">
+  <div class="clr-mono1 medium-normal-text wrapper">
     <div class="item item1">
       <div class="prg1">
-        <div class="quote clr-blue2 prg2">AR-Stand</div>
+        <div class="quote clr-blue2 prg2 grit-mono1">AR-Stand</div>
         <div>Конструктор для создания сцен гибридной реальности, где физический и цифровой объекты существуют и взаимодействуют в реальном времени.</div>
       </div>
 
@@ -52,11 +52,15 @@
   </div>
 </template>
 
-<style>
-.wrapper1 {
+<style lang="scss" scoped>
+@import "/css/vars";
+
+.wrapper {
   display: grid;
   grid-template-columns: 4fr 3fr 5fr;
   /*grid-gap: 20px;*/
+  @include inherit;
+  
 }
 .item {
   text-align: left;

@@ -1,96 +1,110 @@
-<!--
 <template>
-  <div class="header">
-    <header>
-      <div class="logo-alt"></div>
+  <header>
+    <img class="logo" src="../assets/svg/logo.svg" alt="LOGO" />
 
-      <div class="placeholder-header">
-        <div class="text-area-header">
-          <span class="text-header">о нас</span>
-        </div>
-        <div class="text-area-header">
-          <span class="text-header">продукты</span>
-        </div>
-        <div class="text-area-header">
-          <span class="text-header">контакты</span>
-        </div>
-      </div>
-    </header>
-  </div>
+    <nav>
+      <ul class="heading">
+        <li class="nav-item">
+          <nuxt-link class="nav-link clr-mono1" to="#aboutus">О НАС</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link dropdown-toggle clr-mono1"
+            data-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >ПРОДУКТЫ</a>
+          <div class="dropdown-menu medium-normal-text">
+            <a class="dropdown-item" href="#arstand">AR-Stand</a>
+            <a class="dropdown-item" href="#arland">AR-Land</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#virtual">Виртуализация Игр</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link clr-mono1" href="#contacts">КОНТАКТЫ</a>
+        </li>
+      </ul>
+      <!--<div id="navbar-example2" class="head bclr-mono3 navbar-size">
+          <ul class="nav nav-pills header clr-mono1">
+            <li class="nav-item">
+              <nuxt-link class="nav-link clr-mono1" to="#aboutus">О НАС</nuxt-link>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle clr-mono1"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >ПРОДУКТЫ</a>
+              <div class="dropdown-menu medium-normal-text">
+                <a class="dropdown-item" href="#arstand">AR-Stand</a>
+                <a class="dropdown-item" href="#arland">AR-Land</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#virtual">Виртуализация Игр</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link clr-mono1" href="#contacts">КОНТАКТЫ</a>
+            </li>
+          </ul>
+      </div>-->
+    </nav>
+  </header>
 </template>
-
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*.head{
+  display: inline ;
+      text-align: justify;
+    letter-spacing: 1px;
+    height: 8em;
+    padding: 2em 10%;
 
-.header {
+}
+.navbar-size{
+  position: fixed;
+  max-height: 100px;
+max-width: auto;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  color: #e5e5e5;
+}
+*/
+header {
   display: flex;
-  flex-direction: row;
-  background-color: black;
+  top: 0;
+  position: sticky;
+  height: 5rem;
+
   justify-content: space-between;
-  height: 100px;
-}
-.logo-alt {
-  width: 295px;
-  height: 57px;
+  align-items: center;
+  text-align: center;
 
-  background: url("../assets/logo.png");
-  background-origin: content-box;
+  max-width: 1170px;
+  min-width: auto;
 }
-.placeholder-header {
+.logo {
+  height: auto;
+  width: auto;
+  max-height: 3rem;
+  padding: 0 15px;
+}
+ul {
+  margin: 0;
+}
+.nav-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+nav > ul {
   display: flex;
   flex-direction: row;
 }
-.text-area-header {
-  margin: 10px;
-}
-.text-header {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 44px;
-  /* identical to box height */
-
-  letter-spacing: -0.07em;
-
-  text-transform: uppercase;
-
-  color: #c4c4c4;
-}
-</style>-->
-
-<template>
-  <div>
-    <header>
-      <nav id="navbar-example2" class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">LOGO</a>
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link" href="#aboutus">О НАС</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >ПРОДУКТЫ</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#arstand">AR-Stand</a>
-              <a class="dropdown-item" href="#arland">AR-Land</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#virtual">Виртуализация Игр</a>
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contacts">КОНТАКТЫ</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </div>
-</template>
+</style>

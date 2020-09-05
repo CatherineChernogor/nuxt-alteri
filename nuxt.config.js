@@ -4,7 +4,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -36,6 +36,7 @@ export default {
   */
   css: [
     // CSS-файл в проекте
+    '~css/_vars.scss',
     '~css/fonts.scss',
     '~css/colors.scss',
     '~css/textStructure.scss'
@@ -45,6 +46,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {src: 'plugins/owl.js', ssr: false} // Only works on client side
   ],
   /*
   ** Auto import components

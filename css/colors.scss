@@ -1,119 +1,162 @@
+@import '/css/vars';
+
 .clr-mono1 {
-    color: #E5E5E5;
+    color: $mono1;
 }
 
 .clr-mono2 {
-    color: #595959;
+    color: $mono2;
 }
 
 .clr-mono3 {
-    color: #0C0C0C;
+    color: $mono3;
 }
 
 .clr-purple1 {
-    color: #A08DD6;
+    color: $purple1;
 }
 
 .clr-purple2 {
-    color: #735BC2;
+    color: $purple2;
 }
 
 .clr-purple3 {
-    color: #5533B8;
+    color: $purple3;
 }
 
 .clr-red1 {
-    color: #DF9F98;
+    color: $red1;
 }
 
 .clr-red2 {
-    color: #C2462F;
+    color: $red2;
 }
 
 .clr-red3 {
-    color: #B73B22;
+    color: $red3;
 }
 
 .clr-green1 {
-    color: #AFDE99;
+    color: $green1;
 }
 
 .clr-green2 {
-    color: #8AC22F;
+    color: $green2;
 }
 
 .clr-green3 {
-    color: #4AA932;
+    color: $green3;
 }
 
 .clr-blue1 {
-    color: #A5C0D1;
+    color: $blue1;
 }
 
 .clr-blue2 {
-    color: #4187C3;
+    color: $blue2;
 }
 
 .clr-blue3 {
-    color: #2F6F97;
+    color: $blue3;
 }
 
 .bclr-mono1 {
-    background-color: #E5E5E5;
+    background-color: $mono1;
 }
 
 .bclr-mono2 {
-    background-color: #595959;
+    background-color: $mono2;
 }
 
 .bclr-mono3 {
-    background-color: #0C0C0C;
+    background-color: $mono3;
 }
 
 .bclr-purple1 {
-    background-color: #A08DD6;
+    background-color: $purple1;
 }
 
 .bclr-purple2 {
-    background-color: #735BC2;
+    background-color: $purple2;
 }
 
 .bclr-purple3 {
-    background-color: #5533B8;
+    background-color: $purple3;
 }
 
 .bclr-red1 {
-    background-color: #DF9F98;
+    background-color: $red1;
 }
 
 .bclr-red2 {
-    background-color: #C2462F;
+    background-color: $red2;
 }
 
 .bclr-red3 {
-    background-color: #B73B22;
+    background-color: $red3;
 }
 
 .bclr-green1 {
-    background-color: #AFDE99;
+    background-color: $green1;
 }
 
 .bclr-green2 {
-    background-color: #8AC22F;
+    background-color: $green2;
 }
 
 .bclr-green3 {
-    background-color: #4AA932;
+    background-color: $green3;
 }
 
 .bclr-blue1 {
-    background-color: #A5C0D1;
+    background-color: $blue1;
 }
 
 .bclr-blue2 {
-    background-color: #4187C3;
+    background-color: $blue2;
 }
 
 .bclr-blue3 {
-    background-color: #2F6F97;
+    background-color: $blue3;
+}
+
+
+.glit-mono1 {
+    text-shadow: 0px 0px 35px $mono1;
+}
+
+.glit-blue1 {
+    text-shadow: 0px 0px 35px $blue1;
+}
+
+.glit-blue2 {
+    text-shadow: 0px 0px 35px $blue2;
+}
+
+.glit-blue3 {
+    text-shadow: 0px 0px 35px $blue3;
+}
+
+.glit-red1 {
+    text-shadow: 0px 0px 35px $red1;
+}
+
+.glit-red2 {
+    text-shadow: 0px 0px 35px $red2;
+}
+
+.glit-green1 {
+    text-shadow: 0px 0px 35px $green1;
+}
+
+.glit-green2 {
+    text-shadow: 0px 0px 35px $green2;
+}
+
+.glit-purple1 {
+    text-shadow: 0px 0px 35px $purple1;
+}
+
+.glit-purple2 {
+    text-shadow: 0px 0px 35px $purple2;
 }
