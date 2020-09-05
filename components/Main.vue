@@ -50,7 +50,7 @@ export default {};
   background-repeat: no-repeat;
   
   &:hover {
-    animation: grow 3000ms ease;
+    animation: grow 5000ms ease;
   }
 }
 .premask {

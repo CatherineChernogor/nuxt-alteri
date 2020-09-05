@@ -60,13 +60,10 @@
 .wrapper {
   display: grid;
   grid-template-columns: 4fr 3fr 5fr;
-  /*grid-gap: 20px;*/
   @include inherit;
-    align-items: center;
+  align-items: center;
 }
-.item {
-  text-align: left;
-}
+
 /*
 .star {
   content: url("../assets/svg/star-blue.svg");

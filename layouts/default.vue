@@ -6,7 +6,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "/css/vars";
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -17,7 +19,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 *,
@@ -29,7 +31,7 @@ html {
 }
 
 .back {
-  background-color: black;
+  background-color: $mono3;
 }
 .container {
   margin: 0 auto;
@@ -38,7 +40,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 1170px;
+  max-width: 1280px;
   min-width: auto;
 }
 </style>

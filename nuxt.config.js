@@ -46,7 +46,6 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    {src: 'plugins/owl.js', ssr: false} // Only works on client side
   ],
   /*
   ** Auto import components

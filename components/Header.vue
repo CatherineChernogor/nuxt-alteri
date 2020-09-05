@@ -5,50 +5,53 @@
     <nav>
       <ul class="heading">
         <li class="nav-item">
-          <nuxt-link class="nav-link clr-mono1" to="#aboutus">О НАС</nuxt-link>
+          <span class="nav-link clr-mono1" v-on:click="setActive('aboutus')">О НАС</span>
         </li>
         <li class="nav-item">
-          <a
+          <span
             class="nav-link dropdown-toggle clr-mono1"
             data-toggle="dropdown"
-            href="#"
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-          >ПРОДУКТЫ</a>
+          >ПРОДУКТЫ</span>
           <div class="dropdown-menu medium-normal-text">
-            <a class="dropdown-item" href="#arstand">AR-Stand</a>
-            <a class="dropdown-item" href="#arland">AR-Land</a>
+            <a class="dropdown-item" v-on:click="setActive('arstand')">AR-Stand</a>
+            <a class="dropdown-item" v-on:click="setActive('arland')">AR-Land</a>
             <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#virtual">Виртуализация Игр</a>
+            <a class="dropdown-item" v-on:click="setActive('virtual')">Виртуализация Игр</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link clr-mono1" href="#contacts">КОНТАКТЫ</a>
+          <span class="nav-link clr-mono1" v-on:click="setActive('contacts')">КОНТАКТЫ</span>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-<style>
-/*.head{
-  display: inline ;
-      text-align: justify;
-    letter-spacing: 1px;
-    height: 8em;
-    padding: 2em 10%;
 
-}
-.navbar-size{
-  position: fixed;
-  max-height: 100px;
-max-width: auto;
-}
-.nav-link:hover {
-  text-decoration: underline;
-  color: #e5e5e5;
-}
-*/
+<script>
+export default {
+  methods: {
+    setActive: function (message) {
+      let list = ["aboutus", "arstand", "arland", "virtual", "contacts"];
+
+      document.querySelectorAll(".carousel-item").forEach(function (item, i) {
+        item.className =
+          i === list.indexOf(message)
+            ? "carousel-item active"
+            : "carousel-item";
+
+
+        if (message === 'contacts' && i === 0)
+          item.className = "carousel-item active";
+      });
+    },
+  },
+};
+</script>
+
+<style>
 header {
   display: flex;
   top: 0;
@@ -69,6 +72,12 @@ header {
   max-height: 3rem;
   padding: 0 15px;
 }
+.nav-link:hover,
+.dropdown-item:hover {
+  cursor: pointer;
+  z-index: 99999;
+}
+
 ul {
   margin: 0;
 }

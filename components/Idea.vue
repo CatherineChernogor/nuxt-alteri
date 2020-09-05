@@ -5,17 +5,10 @@
     </div>
 
     <div class="slider">
-      <no-ssr>
-        <!-- important to add no-ssr
-
-        <carousel :items=1 :loop=true :center=true :autoplay=true>
-
-            <div class="quote quote-border">new experiense</div>
-            <div class="quote quote-border">breaking button</div>
-            <div class="quote quote-border">from rods to stars</div>
-        </carousel>-->
-      </no-ssr>
-    </div>
+      <div class="quote clr-mono1"><span class="bclr-mono3 quote-border">new experience</span></div>
+      <div class="quote clr-mono1"><span class="bclr-mono3 quote-border">breaking boundaries between the world</span></div>
+      <div class="quote clr-mono1"><span class="bclr-mono3 quote-border">стремимся к невозможному</span></div>
+    </div>bclr-mono3
   </div>
 </template>
 
@@ -34,8 +27,13 @@ export default {};
     }
   }
   .slider {
-      width: 100%;
-      height: 400px;
+    width: 100%;
+    height: 400px;
+    .quote-border {
+      padding: 3px 5px;
+    }
   }
 }
+
+@keyframes
 </style>
