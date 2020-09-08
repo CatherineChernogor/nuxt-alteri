@@ -10,7 +10,7 @@
       <div class="carousel-item active">
         <Main />
       </div>
-
+<!--
       <div class="carousel-item">
         <ArStand />
       </div>
@@ -21,6 +21,8 @@
       <div class="carousel-item">
         <Virtual />
       </div>
+
+      -->
     </div>
     <a
       class="carousel-control-prev"
