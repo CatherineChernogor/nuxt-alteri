@@ -26,7 +26,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .wrapper0 {
   align-items: center;
@@ -45,7 +45,7 @@ export default {};
   grid-auto-rows: 2;
 }
 .bg {
-  background-image: url("../assets/png/layouts/layout2.png");
+  background-image: url("../static/png/layouts/layout2.png");
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -76,17 +76,17 @@ export default {};
 @keyframes grow {
   0% {
     transform: translateX(0);
-    background-image: url("../assets/png/layouts/layout2.png");
+    background-image: url("../static/png/layouts/layout2.png");
   }
   50% {
     /*transform: scaleX(1.5);*/
     transform: translateX(200);
-    background-image: url("../assets/png/layouts/layout1.png");
+    background-image: url("../static/png/layouts/layout1.png");
   }
   100% {
     /*transform: scaleX(1.5);*/
     transform: translateX(400);
-    background-image: url("../assets/png/layouts/layout3.png");
+    background-image: url("../static/png/layouts/layout3.png");
   }
 }
 

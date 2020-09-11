@@ -36,10 +36,10 @@ export default {
   */
   css: [
     // CSS-файл в проекте
-    '~css/_vars.scss',
-    '~css/fonts.scss',
-    '~css/colors.scss',
-    '~css/textStructure.scss'
+    '~assets/css/_vars.scss',
+    '~assets/css/fonts.scss',
+    '~assets/css/colors.scss',
+    '~assets/css/textStructure.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -67,5 +67,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    transpile: [
+      'three'
+    ], 
   }
 }

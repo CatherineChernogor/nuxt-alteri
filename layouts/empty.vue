@@ -1,14 +1,34 @@
+
 <template>
-  <div>
-    <Nuxt class="container" />
-  </div>
+  <Nuxt />
 </template>
+<style lang="scss" scoped>
+body,
+html {
+  height: 100vh;
+  overflow: hidden !important;
+}
 
-<script>
-import * as THREE from "three";
+:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
-export default {};
-</script>
+.scene {
+  cursor: grab;
 
-<style>
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.coverdiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 </style>

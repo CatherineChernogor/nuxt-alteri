@@ -22,7 +22,7 @@
     </div>
 
     <div class="item item2 prg">
-      <img src="../assets/png/ar-stand.png" class="d-block w-100" alt="стенд" />
+      <img src="../static/png/ar-stand.png" class="d-block w-100" alt="стенд" />
     </div>
 
     <div class="item item3">
@@ -55,7 +55,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .wrapper {
   display: grid;

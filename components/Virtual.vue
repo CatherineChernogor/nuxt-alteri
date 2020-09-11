@@ -8,7 +8,7 @@
       >Tехнология, которая позволяет соединять игроков из разных точек вселенной. Вы можете купить любую настольную игру и, подключив ar-приложение, видеть ходы противника. Помимо этого - использование AR позволяет добавить в игру разные графические эффекты.</div>
 
       <div class="prg">
-        <img src="../assets/png/virtual.png" class="d-block w-100" alt="виртуал" />
+        <img src="../static/png/virtual.png" class="d-block w-100" alt="виртуал" />
       </div>
     </div>
 
@@ -36,7 +36,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .wrapper {
   display: grid;

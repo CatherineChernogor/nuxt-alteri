@@ -1,0 +1,22 @@
+@import '/assets/css/vars';
+
+.prg1 {
+    margin-bottom: $margin; //60px
+}
+
+.prg2 {
+    margin-bottom: $margin/2; //30px
+}
+
+.prg3 {
+    margin-bottom: $margin/3; //20px
+}
+
+.prg4 {
+    margin-bottom: $margin/4; //15px
+}
+
+.prg{
+    padding: 0 10px;
+    text-align: left;
+}

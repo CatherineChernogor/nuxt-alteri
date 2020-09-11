@@ -13,7 +13,7 @@
     "@babylonjs/loaders": "^4.1.0",
     "@vue/composition-api": "^1.0.0-beta.11",
     "bootstrap": "^3.4.1",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.4",
     "three": "^0.120.1",
     "vue-babylonjs": "^1.0.0-beta.7",
     "vue-use-three": "^2.0.7"

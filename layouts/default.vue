@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss">
-@import "/css/vars";
+@import "/assets/css/vars";
 
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",

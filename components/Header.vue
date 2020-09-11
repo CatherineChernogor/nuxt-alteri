@@ -1,6 +1,6 @@
 <template>
   <header class="bclr-mono3">
-    <img class="logo" src="../assets/svg/logo.svg" alt="LOGO" />
+    <img class="logo" src="../static/svg/logo.svg" alt="LOGO" />
 
     <nav>
       <ul class="heading">

@@ -1,0 +1,41 @@
+$mono1  : #E5E5E5;
+$mono2  : #595959;
+$mono3  : #0C0C0C;
+$purple1: #A08DD6;
+$purple2: #735BC2;
+$purple3: #5533B8;
+$red1   : #DF9F98;
+$red2   : #C2462F;
+$red3   : #B73B22;
+$green1 : #AFDE99;
+$green2 : #8AC22F;
+$green3 : #4AA932;
+$blue1  : #A5C0D1;
+$blue2  : #4187C3;
+$blue3  : #2F6F97;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$font-family: Montserrat,
+sans-serif;
+
+$margin: 60px;
+
+@mixin flexible () {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+@mixin gridable () {
+    display        : grid;
+    justify-content: center;
+    align-items    : center;
+}
+
+@mixin inherit() {
+    position   : inherit;
+    min-height : inherit;
+    height     : inherit;
+}

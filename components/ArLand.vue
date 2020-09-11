@@ -18,7 +18,7 @@
       </div>
 
       <div class="prg2 img-props prg">
-        <img src="../assets/png/ar-land.png" class="d-block w-75" alt="арляндия" />
+        <img src="../static/png/ar-land.png" class="d-block w-75" alt="арляндия" />
       </div>
     </div>
 
@@ -60,7 +60,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .wrapper {
   display: grid;

@@ -10,7 +10,6 @@
       <div class="carousel-item active">
         <Main />
       </div>
-<!--
       <div class="carousel-item">
         <ArStand />
       </div>
@@ -22,7 +21,7 @@
         <Virtual />
       </div>
 
-      -->
+      
     </div>
     <a
       class="carousel-control-prev"
@@ -76,7 +75,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .carousel {
   @include inherit;

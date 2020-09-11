@@ -28,7 +28,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 .contacts {
   @include flexible;
@@ -62,15 +62,15 @@
   margin-right: 10px;
 }
 .img-vk {
-  background-image: url("../assets/svg/vk.svg");
+  background-image: url("../static/svg/vk.svg");
 }
 .img-inst {
-  background-image: url("../assets/svg/instagram.svg");
+  background-image: url("../static/svg/instagram.svg");
 }
 .img-web {
-  background-image: url("../assets/svg/web.svg");
+  background-image: url("../static/svg/web.svg");
 }
 .img-mail {
-  background-image: url("../assets/svg/mail.svg");
+  background-image: url("../static/svg/mail.svg");
 }
 </style>

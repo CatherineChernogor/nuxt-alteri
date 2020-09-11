@@ -56,7 +56,7 @@
 
 
 <style lang="scss" scoped>
-@import "/css/vars";
+@import "/assets/css/vars";
 
 $block-width: 120px;
 
@@ -101,30 +101,30 @@ $block-width: 120px;
 }
 
 .human-img1 {
-  background-image: url("../assets/png/humans/human-1.png");
+  background-image: url("../static/png/humans/human-1.png");
 }
 
 .human-img2 {
-  background-image: url("../assets/png/humans/human-2.png");
+  background-image: url("../static/png/humans/human-2.png");
 }
 
 .human-img3 {
-  background-image: url("../assets/png/humans/human-3.png");
+  background-image: url("../static/png/humans/human-3.png");
 }
 
 .human-img4 {
-  background-image: url("../assets/png/humans/human-4.png");
+  background-image: url("../static/png/humans/human-4.png");
 }
 
 .human-img5 {
-  background-image: url("../assets/png/humans/human-5.png");
+  background-image: url("../static/png/humans/human-5.png");
 }
 
 .human-img6 {
-  background-image: url("../assets/png/humans/human-6.png");
+  background-image: url("../static/png/humans/human-6.png");
 }
 
 .human-img7 {
-  background-image: url("../assets/png/humans/human-7.png");
+  background-image: url("../static/png/humans/human-7.png");
 }
 </style>
