@@ -120,6 +120,10 @@
     background-color: $blue3;
 }
 
+.glit {
+    position: absolute;
+    filter  : blur(4px);
+}
 
 .glit-mono1 {
     text-shadow: 0px 0px 35px $mono1;

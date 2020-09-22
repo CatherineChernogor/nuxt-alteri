@@ -13,7 +13,7 @@ export default {
         const fov = 60;
         const aspect = window.innerWidth / window.innerHeight; // the canvas default
         const near = 0.1;
-        const far = 2000;
+        const far = 4000;
         var camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
         camera.position.set(1000, 600, 600);
@@ -26,9 +26,29 @@ export default {
       //renderer
       {
         var scene = new THREE.Scene();
-        scene.background = new THREE.Color("white"); //#FFCCFE
 
-        var renderer = new THREE.WebGLRenderer({ antialias: true });
+        const loader = new THREE.TextureLoader();
+        const bgTexture = loader.load("background2.jpg");
+        // Set the repeat and offset properties of the background texture
+        // to keep the image's aspect correct.
+        // Note the image may not have loaded yet.
+        const canvasAspect = window.innerWidth / window.innerHeight;
+        const imageAspect = bgTexture.image
+          ? bgTexture.image.width / bgTexture.image.height
+          : 1;
+        const aspect = imageAspect / canvasAspect;
+
+        bgTexture.offset.x = aspect > 1 ? (1 - 1 / aspect) / 2 : 0;
+        bgTexture.repeat.x = aspect > 1 ? 1 / aspect : 1;
+
+        bgTexture.offset.y = aspect > 1 ? 0 : (1 - aspect) / 2;
+        bgTexture.repeat.y = aspect > 1 ? 1 : aspect;
+        scene.background = bgTexture;
+        //scene.background = new THREE.Color("white"); //#FFCCFE
+
+        var renderer = new THREE.WebGLRenderer({
+          antialias: true,
+        });
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
       }
@@ -56,11 +76,11 @@ export default {
         controls.autoRotate = true;
         controls.target.set(0, 5, 0);
       }
-      
+
       //grid
       {
-        const size = 10000;
-        const divisions = 100;
+        const size = 2000;
+        const divisions = 25;
         const colorCenterLine = 0xff0000;
         const colorGrid = 0xffffff;
         var gridXZ = new THREE.GridHelper(
@@ -98,16 +118,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.split {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-.split > div {
-  width: 100%;
-  height: 100%;
-}
 </style>

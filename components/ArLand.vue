@@ -11,14 +11,24 @@
 
       <div class="prg2">
         <div class="highlight clr-green2 prg4 prg">Какие навыки будут развиты</div>
-        <ul class="prg">
-          <li class="star">Инженерное мышление</li>
-          <li class="star">Командная работа</li>
+        <ul class="prg star-list green-star">
+          <li>Инженерное мышление</li>
+          <li>Командная работа</li>
         </ul>
       </div>
 
       <div class="prg2 img-props prg">
-        <img src="../static/png/ar-land.png" class="d-block w-75" alt="арляндия" />
+        <nuxt-link :to="'/ArLand'">
+          <div class="img-row">
+            <img src="../static/png/ar-land.png" class="d-block stand" alt="арляндия" />
+
+            <img
+              src="../static/svg/flying_arrow-green.svg"
+              class="d-block arrow bounce-2"
+              alt="arrow"
+            />
+          </div>
+        </nuxt-link>
       </div>
     </div>
 
@@ -39,10 +49,10 @@
           class="prg4 prg"
         >AR-Ляндия - это еще и инженерный тренажер включающий в себя три образовательных курса:</div>
 
-        <ul class="prg3 prg">
-          <li class="star">Урбанистика</li>
-          <li class="star">Анализ данных</li>
-          <li class="star">3D-проектирование</li>
+        <ul class="prg3 prg star-list green-star">
+          <li>Урбанистика</li>
+          <li>Анализ данных</li>
+          <li>3D-проектирование</li>
         </ul>
 
         <div
@@ -65,19 +75,55 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 6fr);
-  grid-gap: 20px;
-  align-items: center;
+  grid-gap: 30px;
   @include inherit;
-  align-items: center;
+  align-items: start;
+  margin: 20px 0;
 }
-
+.item1,
+.item2 {
+  padding-top: 5rem;
+}
 .img-props {
-  padding: 0 3rem;
+  /*margin: 0 -3rem;*/
+  margin: 0 auto;
 }
-/*
-.star {
-  content: url("../assets/svg/star-green.svg");
-  height: 4em;
-  width: 4em;
-}*/
+.img-row {
+  display: flex;
+  flex-direction: row;
+}
+.stand {
+  padding: 0 1rem;
+  max-height: 30vh;
+  height: auto;
+  width: auto;
+}
+.arrow {
+  height: $flying-arrow-size;
+  width: $flying-arrow-size;
+  padding-right: $flying-arrow-size/2;
+  margin: 0 auto;
+  margin-bottom: 60% ;
+  transform: rotate(90deg);
+
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.bounce-2 {
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+@keyframes bounce-2 {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
 </style>

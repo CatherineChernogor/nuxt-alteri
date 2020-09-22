@@ -41,12 +41,15 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 6fr);
-  grid-gap: 20px;
+  grid-gap: 30px;
   @include inherit;
-  align-items: center;
+  align-items: start;
 }
 .item {
   text-align: left;
+}
+.item1, .item2{
+  padding-top: 5rem ;
 }
 /*
 .star {

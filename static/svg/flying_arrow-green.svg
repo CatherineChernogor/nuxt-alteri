@@ -1,23 +1,48 @@
-<svg width="152" height="139" viewBox="0 0 152 139" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_di)">
-<path d="M77 62.7281V76.6176C77 77.15 76.5829 77.589 76.0513 77.6163L37.0513 79.6189C36.4796 79.6482 36 79.1926 36 78.6202V60.7255C36 60.1531 36.4796 59.6975 37.0513 59.7268L76.0513 61.7294C76.5829 61.7567 77 62.1957 77 62.7281Z" fill="#8AC22F" stroke="#8AC22F"/>
-<path d="M114.66 72.3186C116.272 70.9229 116.272 68.4228 114.66 67.0271L79.7703 36.8116C77.5035 34.8485 73.979 36.4587 73.979 39.4573V99.8884C73.979 102.887 77.5035 104.497 79.7703 102.534L114.66 72.3186Z" fill="#8AC22F" stroke="#8AC22F"/>
-</g>
-<defs>
-<filter id="filter0_di" x="-1" y="0.449219" width="152.369" height="140.224" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="17.5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.541726 0 0 0 0 0.760784 0 0 0 0 0.184314 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="2.5"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.541176 0 0 0 0 0.760784 0 0 0 0 0.184314 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
-</filter>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#8AC22F}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M11266.88 19809.77l-3191.22 -3190.32 10319.18 0c1208.14,-0.04 2187.54,-979.43 2187.54,-2187.58 0,-1208.15 -979.4,-2187.54 -2187.54,-2187.54l-10319.14 0 3191.22 -3190.32c895.72,-895.72 895.72,-2348 0,-3243.72 -895.72,-895.72 -2348,-895.72 -3243.72,0l-6575.34 6575.34c-1222.36,1176.68 -1473.82,2619.51 -114.3,3979.11l6689.64 6689.64c895.72,895.72 2348,895.72 3243.72,0 895.72,-895.72 895.72,-2348 0,-3243.72l-0.04 -0.89z"/>
+  <g id="_2449600367680">
+  </g>
+  <g id="_2449600368192">
+  </g>
+  <g id="_2449600364640">
+  </g>
+  <g id="_2449600361824">
+  </g>
+  <g id="_2449600362912">
+  </g>
+  <g id="_2449600362592">
+  </g>
+  <g id="_2449600360672">
+  </g>
+  <g id="_2449600361120">
+  </g>
+  <g id="_2449600360384">
+  </g>
+  <g id="_2449600361280">
+  </g>
+  <g id="_2449600425376">
+  </g>
+  <g id="_2449600425664">
+  </g>
+  <g id="_2449600425792">
+  </g>
+  <g id="_2449600424576">
+  </g>
+  <g id="_2449600421408">
+  </g>
+ </g>
 </svg>

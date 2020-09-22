@@ -7,21 +7,20 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
+      
       <div class="carousel-item active">
         <Main />
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item ">
         <ArStand />
       </div>
-
+      
       <div class="carousel-item">
         <ArLand />
       </div>
       <div class="carousel-item">
         <Virtual />
       </div>
-
-      
     </div>
     <a
       class="carousel-control-prev"
@@ -29,20 +28,7 @@
       role="button"
       data-slide="prev"
     >
-      <span class="carousel-control-prev-icon" aria-hidden="true">
-        <svg
-          width="45"
-          height="80"
-          viewBox="0 0 45 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M44.2917 4.84484L9.37027 39.6458L9.01488 40L9.37027 40.3542L44.2917 75.1552L40.1384 79.2941L0.70833 40L40.1384 0.705888L44.2917 4.84484Z"
-            stroke="#E5E5E5"
-          />
-        </svg>
-      </span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a
@@ -51,20 +37,7 @@
       role="button"
       data-slide="next"
     >
-      <span class="carousel-control-next-icon" aria-hidden="true">
-        <svg
-          width="45"
-          height="80"
-          viewBox="0 0 45 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.708332 4.84484L35.6297 39.6458L35.9851 40L35.6297 40.3542L0.708332 75.1552L4.86161 79.2941L44.2917 40L4.86161 0.705888L0.708332 4.84484Z"
-            stroke="#E5E5E5"
-          />
-        </svg>
-      </span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
@@ -85,6 +58,7 @@ export default {};
 .carousel-control-next {
   width: auto;
   min-width: 20px;
+
   padding: 5px;
 }
 .carousel-inner {
@@ -92,6 +66,7 @@ export default {};
   align-items: center;
   min-height: inherit;
   height: inherit;
+  max-width: 1000px;
 }
 .carousel-item {
   align-items: center;
@@ -104,4 +79,18 @@ export default {};
   height: 40px;
   background-image: unset;
 }
+.carousel-control-next-icon {
+  background-image: url("../static/svg/arrow-next.svg");
+}
+.carousel-control-next-icon:hover {
+  background-image: url("../static/svg/arrow-next-hover.svg");
+}
+.carousel-control-prev-icon {
+  background-image: url("../static/svg/arrow-prev.svg");
+}
+.carousel-control-prev-icon:hover {
+  background-image: url("../static/svg/arrow-prev-hover.svg");
+}
+
+
 </style>

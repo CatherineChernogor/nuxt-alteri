@@ -16,7 +16,38 @@
     margin-bottom: $margin/4; //15px
 }
 
-.prg{
-    padding: 0 10px;
+.prg {
+    padding   : 0 10px;
     text-align: left;
 }
+
+.star-list {
+    list-style  : none;
+    padding-left: 0;
+}
+
+.star-list li {
+    position    : relative;
+    padding-left: 40px;
+}
+
+.star-list li:before {
+    content            : '';
+    width              : 15px;
+    height             : 15px;
+    position           : absolute;
+    background-size    : cover;
+    background-position: center;
+    left               : 15px;
+    top                : 50%;
+    transform          : translateY(-50%);
+}
+
+.green-star li::before {
+    background-image: url('../../static/svg/star-green.svg');
+}
+
+.blue-star li::before {
+    background-image: url('../../static/svg/star-blue.svg');
+}
+
