@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ArStand3D", {data:[{}],fetch:[],mutations:void 0});
