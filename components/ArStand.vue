@@ -6,7 +6,9 @@
           <span class="glit clr-blue2">AR-Stand</span> AR-Stand
         </div>
         <div class="prg">
-          <span class="clr-blue2 glit">Конструктор</span>Конструктор для создания сцен гибрибной реальности, где физический и цифровой объекты существуют и взаимодействуют в реальном времени.
+          <span class="clr-blue1">Конструктор</span> для создания сцен
+          <span class="clr-blue1">гибридной</span>
+          <span class="clr-blue1">реальности</span>, где физический и цифровой объекты существуют и взаимодействуют в реальном времени.
         </div>
       </div>
 
@@ -24,7 +26,7 @@
     </div>
 
     <div class="item item2 prg">
-      <nuxt-link :to="'/ArStand'">
+      <nuxt-link :to="'/ArStand3D'">
         <div class="item2">
           <img src="../static/svg/flying_arrow-blue.svg" class="d-block arrow bounce-2" alt="arrow" />
 
@@ -39,18 +41,26 @@
         <div class="prg">AR-Stand будет полезен в двух случаях:</div>
       </div>
 
-      <div
-        class="prg4 prg"
-      >Для обучения маленьких детей (от 4х лет) алгоритмическому мышлению. Тактильность и специальное программное обеспечение снижают порог вхождение в обучение программированию. Таким образом набор курсов позволит плавно перейти из курса "малышковое программирования" в курс "разработчик игр".</div>
+      <div class="prg4 prg">
+        Для
+        <span class="clr-blue1">обучения</span>
+        <span class="clr-blue1">маленьких</span>
+        <span class="clr-blue1">детей</span>
+        (от 4х лет) алгоритмическому мышлению. Тактильность и специальное программное обеспечение снижают порог вхождение в обучение программированию. Таким образом набор курсов позволит плавно перейти из курса "малышковое программирования" в курс "разработчик игр".
+      </div>
 
       <div
         class="prg2 prg"
       >Кроме того AR-Stand - это устройство, которое не только предоставляет ряд игр гибридной реальности.</div>
 
       <div class="prg2">
-        <div
-          class="prg4 prg"
-        >Стенд включает в себя платформу для обучения технологиям заложенных в его основу:</div>
+        <div class="prg4 prg">
+          Стенд включает в себя платформу
+          <span class="clr-blue1">для</span>
+          <span class="clr-blue1">обучения</span>
+          <span class="clr-blue1">технологиям</span>
+          заложенных в его основу:
+        </div>
         <ul class="prg star-list blue-star">
           <li class="star">Компьютерное зрение</li>
           <li class="star">Проективная геометрия</li>
@@ -106,13 +116,13 @@
 }
 @keyframes bounce-2 {
   0% {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 }
 </style>

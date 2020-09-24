@@ -1,40 +1,59 @@
 <template>
-  <div>
+  <div class="idea">
     <div class="heading button-head">
       <span class>НАША ИДЕОЛОГИЯ</span>
     </div>
 
-    <div class="slider">
-      <div class="mask clr-mono1">
-        <ul>
-          <li class="anim1">
-            <div class="quote">
-              <span class="bclr-mono3 quote-border slide1">new experience</span>
-            </div>
-          </li>
-          <li class="anim2">
-            <div class="quote">
-              <span class="bclr-mono3 quote-border slide2">breaking boundaries between the world</span>
-            </div>
-          </li>
-          <li class="anim3">
-            <div class="quote">
-              <span class="bclr-mono3 quote-border slide3">стремимся к невозможному</span>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div class="slider mask clr-mono1 quote">
+      <span class="bclr-mono3 quote-border prev">{{ list[next - 1] }}</span>
+      <span class="bclr-mono3 quote-border cur">{{ list[cur - 1] }}</span>
+      <span class="bclr-mono3 quote-border next">{{ list[prev - 1] }}</span>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+      list: [
+        "new experience",
+        "breaking boundaries between the world",
+        "стремимся к невозможному",
+      ],
+      next: 3,
+      cur: 2,
+      prev: 1,
+    };
+  },
+
+  methods: {
+    showGalliry() {
+      setInterval(() => {
+        this.moveSlide();
+      }, 10000);
+    },
+    moveSlide() {
+      this.cur = this.eval(this.cur + 1);
+      this.next = this.eval(this.next + 1);
+      this.prev = this.eval(this.prev + 1);
+    },
+    eval(ind) {
+      if (ind > this.list.length) ind -= this.list.length;
+      return ind;
+    },
+  },
+  mounted() {
+    this.showGalliry();
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import "/assets/css/vars";
-
+.idea {
+  opacity: inherit;
+}
 .button-head.heading {
   padding: 20px 30px;
   span {
@@ -44,10 +63,11 @@ export default {};
 }
 
 .slider {
+  opacity: inherit;
   overflow: visible;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: inherit/2;
   .quote-border {
     padding: 3px 5px;
   }
@@ -65,143 +85,8 @@ export default {};
   position: relative;
 }
 
-.slider li {
-  position: inherit;
-  top: -325px;
-  list-style: none;
-}
-
-.slider li.anim1 {
-  animation: cycle 30s linear infinite;
-}
-
-.slider li.anim2 {
-  animation: cycle2 30s linear infinite;
-}
-
-.slider li.anim3 {
-  animation: cycle3 30s linear infinite;
-}
-
-
-
-@keyframes cycle {
-  0% {
-    top: 0px;
-  }
-  4% {
-    top: 0px;
-  }
-  16% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  20% {
-    top: 325px;
-    opacity: 0;
-    z-index: 0;
-  }
-  21% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
-  50% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
-  92% {
-    top: -325px;
-    opacity: 0;
-    z-index: 0;
-  }
-  96% {
-    top: -325px;
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes cycle2 {
-  0% {
-    top: -325px;
-    opacity: 0;
-  }
-  16% {
-    top: -325px;
-    opacity: 0;
-  }
-  20% {
-    top: 0px;
-    opacity: 1;
-  }
-  24% {
-    top: 0px;
-    opacity: 1;
-  }
-  36% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  40% {
-    top: 325px;
-    opacity: 0;
-    z-index: 0;
-  }
-  41% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes cycle3 {
-  0% {
-    top: -325px;
-    opacity: 0;
-  }
-  36% {
-    top: -325px;
-    opacity: 0;
-  }
-  40% {
-    top: 0px;
-    opacity: 1;
-  }
-  44% {
-    top: 0px;
-    opacity: 1;
-  }
-  56% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  60% {
-    top: 325px;
-    opacity: 0;
-    z-index: 0;
-  }
-  61% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    top: -325px;
-    opacity: 0;
-    z-index: -1;
-  }
+.prev,
+.next {
+  display: none;
 }
 </style>

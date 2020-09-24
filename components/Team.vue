@@ -63,6 +63,7 @@ $block-width: 120px;
 .humans {
   @include flexible;
   flex-direction: column;
+  border-left: solid $mono1 2px;
 }
 .human {
   @include flexible;

@@ -65,6 +65,7 @@ header {
   max-width: 100vw;
   width: -webkit-fill-available;
   min-width: auto;
+  z-index: 99999;
 }
 .logo {
   height: auto;

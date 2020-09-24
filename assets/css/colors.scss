@@ -122,45 +122,47 @@
 
 .glit {
     position: absolute;
-    filter  : blur(4px);
+    filter  : blur(2px);
+
 }
 
+
 .glit-mono1 {
-    text-shadow: 0px 0px 35px $mono1;
+    text-shadow: 0px 0px $glit-raduis $mono1;
 }
 
 .glit-blue1 {
-    text-shadow: 0px 0px 35px $blue1;
+    text-shadow: 0px 0px $glit-raduis $blue1;
 }
 
 .glit-blue2 {
-    text-shadow: 0px 0px 35px $blue2;
+    text-shadow: 0px 0px $glit-raduis $blue2;
 }
 
 .glit-blue3 {
-    text-shadow: 0px 0px 35px $blue3;
+    text-shadow: 0px 0px $glit-raduis $blue3;
 }
 
 .glit-red1 {
-    text-shadow: 0px 0px 35px $red1;
+    text-shadow: 0px 0px $glit-raduis $red1;
 }
 
 .glit-red2 {
-    text-shadow: 0px 0px 35px $red2;
+    text-shadow: 0px 0px $glit-raduis $red2;
 }
 
 .glit-green1 {
-    text-shadow: 0px 0px 35px $green1;
+    text-shadow: 0px 0px $glit-raduis $green1;
 }
 
 .glit-green2 {
-    text-shadow: 0px 0px 35px $green2;
+    text-shadow: 0px 0px $glit-raduis $green2;
 }
 
 .glit-purple1 {
-    text-shadow: 0px 0px 35px $purple1;
+    text-shadow: 0px 0px $glit-raduis $purple1;
 }
 
 .glit-purple2 {
-    text-shadow: 0px 0px 35px $purple2;
+    text-shadow: 0px 0px $glit-raduis $purple2;
 }

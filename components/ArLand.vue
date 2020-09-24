@@ -3,11 +3,18 @@
     <div class="item item1">
       <div class="quote clr-green2 prg2 prg">AR-Ляндия</div>
 
-      <div class="prg2 prg">Это командная игра, которая может быть выстроена в нескольких режимах.</div>
+      <div class="prg2 prg">
+        Это
+        <span class="clr-green1">командная</span>
+        игра, которая может быть выстроена в нескольких режимах.
+      </div>
 
-      <div
-        class="prg2 prg"
-      >Это детская стратегическая настольная игра. Детям предлагается выступить в роли урбанистов и спроектировать городскую среду. В ходе игры они могут анализировать предпочтения горожан, их поведение, и на основе этого делать предположение о том как следует застроить город.</div>
+      <div class="prg2 prg">
+        Это
+        <span class="clr-green1">детская</span>
+        <span class="clr-green1">стратегическая</span>
+        настольная игра. Детям предлагается выступить в роли урбанистов и спроектировать городскую среду. В ходе игры они могут анализировать предпочтения горожан, их поведение, и на основе этого делать предположение о том как следует застроить город.
+      </div>
 
       <div class="prg2">
         <div class="highlight clr-green2 prg4 prg">Какие навыки будут развиты</div>
@@ -18,7 +25,7 @@
       </div>
 
       <div class="prg2 img-props prg">
-        <nuxt-link :to="'/ArLand'">
+        <nuxt-link :to="'/ArLand3D'">
           <div class="img-row">
             <img src="../static/png/ar-land.png" class="d-block stand" alt="арляндия" />
 
@@ -103,7 +110,7 @@
   width: $flying-arrow-size;
   padding-right: $flying-arrow-size/2;
   margin: 0 auto;
-  margin-bottom: 60% ;
+  margin-bottom: 60%;
   transform: rotate(90deg);
 
   align-self: flex-end;
