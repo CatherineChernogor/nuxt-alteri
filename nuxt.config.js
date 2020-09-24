@@ -4,7 +4,10 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'universal',
+  mode: 'spa',
+  router: {
+    base: '/alteri-lab/'
+  },
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -14,8 +17,9 @@ export default {
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
   */
+
   head: {
-    title: 'Alteri' || process.env.npm_package_name || '',
+    title: 'alteri-lab' || process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -69,6 +73,6 @@ export default {
   build: {
     transpile: [
       'three'
-    ], 
+    ],
   }
 }

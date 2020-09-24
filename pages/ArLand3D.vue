@@ -30,8 +30,8 @@ export default {
       intensity: 5,
     },
     grid: {
-      size: 2000,
-      divisions: 25,
+      size: 0, //2000,
+      divisions: 0,//25,
       colorCenterLine: 0xff0000,
       colorGrid: 0xffffff,
     },
