@@ -4,9 +4,9 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa',
+  mode: 'universal',
   router: {
-    base: '/alteri-lab/'
+    base: '/nuxt-alteri/'
   },
   /*
   ** Nuxt target
@@ -19,7 +19,7 @@ export default {
   */
 
   head: {
-    title: 'alteri-lab' || process.env.npm_package_name || '',
+    title: 'nuxt-alteri' || process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
