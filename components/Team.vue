@@ -83,6 +83,7 @@ $block-width: 120px;
   height: $block-width;
   width: $block-width;
   background-size: cover;
+  border-radius: 50%;
 }
 
 .separator {
@@ -102,27 +103,27 @@ $block-width: 120px;
 }
 
 .human-img1 {
-  background-image: url("../static/png/humans/human-1.png");
+  background-image: url("../static/png/humans/h1.webp");
 }
 
 .human-img2 {
-  background-image: url("../static/png/humans/human-2.png");
+  background-image: url("../static/png/humans/h2.webp");
 }
 
 .human-img3 {
-  background-image: url("../static/png/humans/human-3.png");
+  background-image: url("../static/png/humans/h3.webp");
 }
 
 .human-img4 {
-  background-image: url("../static/png/humans/human-4.png");
+  background-image: url("../static/png/humans/h4.webp");
 }
 
 .human-img5 {
-  background-image: url("../static/png/humans/human-5.png");
+  background-image: url("../static/png/humans/h5.webp");
 }
 
 .human-img6 {
-  background-image: url("../static/png/humans/human-6.png");
+  background-image: url("../static/png/humans/h6.webp");
 }
 
 .human-img7 {
