@@ -12,7 +12,7 @@
         <div class="human-img human-img2"></div>
         <div class="name">Веснин Артем</div>
         <div class="separator"></div>
-        <div class="caption">Вице-президент, ведущий инженер по компьютерному зрению</div>
+        <div class="caption">R&amp;D</div>
       </div>
 
       <div class="human human3">
