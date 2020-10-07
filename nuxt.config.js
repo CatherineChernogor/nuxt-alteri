@@ -6,7 +6,7 @@ export default {
   */
   mode: 'universal',
   router: {
-    base: '/nuxt-alteri/'
+    base: ''
   },
   /*
   ** Nuxt target
