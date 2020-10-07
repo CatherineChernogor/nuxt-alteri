@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div ref="container"></div>
+</template>
 
 <script>
 import * as THREE from "three";
@@ -8,43 +10,105 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 export default {
   props: ["camera", "light", "grid", "modelPath"],
 
-  methods: {
-    forceRerender() {
-      this.componentKey += 1;  
+  data() {
+    const scene = new THREE.Scene();
+    const renderer = new THREE.WebGLRenderer({antialias: true});
+    const light = this.getThreeLight(this.light);
+    const camera = this.getThreeCamera(this.camera);
+    const model = this.modelPath;
+
+    return {
+        scene_: scene,
+        light_: light,
+        camera_: camera,
+        renderer_:  renderer,
+        model_: model,
+    };
+  },
+
+  watch: {
+    modelPath: {
+      deep: true,
+      handler (v) {
+        this.loadAndReplaceObject(v);
+      }
     },
-    canvas() {
-      console.log(this.camera);
-      console.log(this.light);
-      console.log(this.grid);
-      console.log(this.modelPath);
-      //camera
-      {
-        const fov = this.camera.fov;
-        const aspect = window.innerWidth / window.innerHeight; // the canvas default
-        const near = this.camera.near;
-        const far = this.camera.far;
-        var camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera: {
+      deep: true,
+      handler(v) {
+        this.updateCamera(v);
+      }
+    },
+    light: {
+      deep: true,
+      handle(v) {
+        this.updateLight(v);
+      }
+    }
+  },
 
-        camera.position.set(
-          this.camera.positionA,
-          this.camera.positionB,
-          this.camera.positionC
-        );
+  methods: {
 
-        function updateCamera() {
-          camera.updateProjectionMatrix();
-        }
+    loadAndReplaceObject(path) {
+      if (this.model_) {
+        this.scene_.remove(this.model_);
       }
 
+      const loader = new GLTFLoader();
+      loader.load(path, (obj) => {
+        this.scene_.add(obj.scene);
+        this.model_ = obj.scene;
+        console.log(obj);
+      });
+    },
+
+    getThreeLight(light) {
+      const skyColor = light.skyColor;
+      const groundColor = light.groundColor;
+      const intensity = light.intensity;
+      return new THREE.HemisphereLight(
+        skyColor,
+        groundColor,
+        intensity
+      );
+    },
+
+    getThreeCamera(camera) {
+      const fov = camera.fov;
+      const aspect = window.innerWidth / window.innerHeight; // the canvas default
+      const near = camera.near;
+      const far = camera.far;
+
+      const result = new THREE.PerspectiveCamera(fov, aspect, near, far);
+      result.position.set(
+        camera.positionA,
+        camera.positionB,
+        camera.positionC
+      );
+
+      return result;
+    },
+
+    updateCamera(newCamera) {
+      this.scene_.remove(this.camera_);
+      this.camera_ = this.getThreeCamera(newCamera);
+      this.scene_.add(this.camera_);
+    },
+
+    updateLight(newLight) {
+      this.scene_.remove(this.light_);
+      this.light_ = this.getThreeLight(newLight);
+      this.scene_.add(this.light_);
+    },
+
+    initBackground() {
       //renderer
       {
-        var scene = new THREE.Scene();
+        var scene = this.scene_;
 
         const loader = new THREE.TextureLoader();
         const bgTexture = loader.load("background2.jpg");
-        // Set the repeat and offset properties of the background texture
-        // to keep the image's aspect correct.
-        // Note the image may not have loaded yet.
+
         const canvasAspect = window.innerWidth / window.innerHeight;
         const imageAspect = bgTexture.image
           ? bgTexture.image.width / bgTexture.image.height
@@ -59,29 +123,16 @@ export default {
         scene.background = bgTexture;
         //scene.background = new THREE.Color("white"); //#FFCCFE
 
-        var renderer = new THREE.WebGLRenderer({
-          antialias: true,
-        });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-      }
-
-      //hemishere light
-      {
-        const skyColor = this.light.skyColor;
-        const groundColor = this.light.groundColor;
-        const intensity = this.light.intensity;
-        const light = new THREE.HemisphereLight(
-          skyColor,
-          groundColor,
-          intensity
-        );
-        scene.add(light);
+        //var renderer = new THREE.WebGLRenderer({
+        //  antialias: true,
+        //});
+        this.renderer_.setSize(window.innerWidth, window.innerHeight);
+        //document.body.appendChild(renderer.domElement);
       }
 
       //controls
       {
-        var controls = new OrbitControls(camera, renderer.domElement);
+        var controls = new OrbitControls(this.camera_, this.renderer_.domElement);
 
         controls.enableDamping = true;
         controls.dampingFactor = 0.25;
@@ -104,28 +155,19 @@ export default {
         );
         scene.add(gridXZ);
       }
-
-      //loader glft
-      {
-        const loader = new GLTFLoader();
-        const url = this.modelPath;
-
-        loader.load(url, (obj) => {
-          scene.add(obj.scene);
-        });
-      }
-
-      function animate() {
-        controls.update();
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      }
-
-      animate();
+    },
+    animate(){
+      requestAnimationFrame(this.animate);
+      this.renderer_.render(this.scene_, this.camera_);
     },
   },
   mounted() {
-    this.canvas();
-  },
+    this.$refs.container.appendChild(this.renderer_.domElement);
+    this.initBackground();
+    this.updateLight(this.light);
+    this.updateCamera(this.camera);
+    this.loadAndReplaceObject(this.modelPath);
+    this.animate();
+  }
 };
 </script>
