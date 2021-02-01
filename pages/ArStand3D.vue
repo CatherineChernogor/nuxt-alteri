@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <nuxt-link :to="'/'" exact class="go-back-button highlight" >GO BACK</nuxt-link>
+      <nuxt-link :to="'/'" exact class="go-back-button highlight">GO BACK</nuxt-link>
       <model
         :camera="camera"
         :light="light"
@@ -17,12 +17,12 @@ export default {
   layout: "empty",
   data: () => ({
     camera: {
-      fov: 50,
-      near: 0.1,
+      fov: 70,
+      near: 0.2,
       far: 10000,
-      positionA: 3000,
-      positionB: 2000,
-      positionC: 3000,
+      positionA: 0,
+      positionB: 600,
+      positionC: 2000,
     },
     light: {
       skyColor: 0x989fa3,
@@ -30,13 +30,13 @@ export default {
       intensity: 1.5,
     },
     grid: {
-      size: 10000,
-      divisions: 100,
+      size: 5000,
+      divisions: 25,
       colorCenterLine: 0xff0000,
       colorGrid: 0xffffff,
     },
     modelPath: "model_stand/stand_light.gltf",
-    componentKey: 0,
+    componentKey: "ArStand",
   }),
 
   components: {

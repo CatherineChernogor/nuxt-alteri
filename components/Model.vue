@@ -59,7 +59,7 @@ export default {
       loader.load(path, (obj) => {
         this.scene_.add(obj.scene);
         this.model_ = obj.scene;
-        console.log(obj);
+        // console.log(obj);
       });
     },
 

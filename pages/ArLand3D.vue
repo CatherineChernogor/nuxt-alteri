@@ -1,8 +1,11 @@
 <template>
   <div>
     <client-only>
-      <nuxt-link :to="'/'" exact class="go-back-button highlight">GO BACK</nuxt-link>
+      <nuxt-link :to="'/'" exact class="go-back-button highlight"
+        >GO BACK</nuxt-link
+      >
       <model
+        
         :camera="camera"
         :light="light"
         :grid="grid"
@@ -17,12 +20,12 @@ export default {
   layout: "empty",
   data: () => ({
     camera: {
-      fov: 60,
+      fov: 70,
       near: 0.1,
       far: 4000,
-      positionA: 1000,
-      positionB: 600,
-      positionC: 600,
+      positionA: 0,
+      positionB: 400,
+      positionC: 1000,
     },
     light: {
       skyColor: 0xb9c8d8,
@@ -36,10 +39,12 @@ export default {
       colorGrid: 0xffffff,
     },
     modelPath: "model_land/land.gltf",
-    componentKey: 100,
+    componentKey: "ArLand",
   }),
   components: {
-    Model: process.browser ? () => import("../components/Model.vue") : null,
+    Model: process.browser
+      ? () => import("../components/Model.vue")
+      : null,
   },
 };
 </script>

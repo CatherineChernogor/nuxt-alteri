@@ -29,9 +29,7 @@ export default {
 
         const loader = new THREE.TextureLoader();
         const bgTexture = loader.load("background2.jpg");
-        // Set the repeat and offset properties of the background texture
-        // to keep the image's aspect correct.
-        // Note the image may not have loaded yet.
+        
         const canvasAspect = window.innerWidth / window.innerHeight;
         const imageAspect = bgTexture.image
           ? bgTexture.image.width / bgTexture.image.height
