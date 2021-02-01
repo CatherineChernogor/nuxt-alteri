@@ -63,13 +63,14 @@ $block-width: 120px;
 .humans {
   @include flexible;
   flex-direction: column;
-  border-left: solid $mono1 2px;
+  // border-left: solid $mono1 2px;
 }
 .human {
   @include flexible;
   color: $mono1;
   flex-direction: column;
   max-width: mimimax($block-width * 1.75, auto);
+  text-align: center;
 }
 
 .line {
@@ -127,6 +128,6 @@ $block-width: 120px;
 }
 
 .human-img7 {
-  background-image: url("../static/png/humans/human-7.png");
+  background-image: url("../static/png/humans/h7.png");
 }
 </style>

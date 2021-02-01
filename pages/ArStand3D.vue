@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <nuxt-link :to="'/'" exact class="go-back-button highlight">GO BACK</nuxt-link>
+      <nuxt-link :to="'/'" exact class="go-back-button highlight" >GO BACK</nuxt-link>
       <model
         :camera="camera"
         :light="light"
@@ -30,8 +30,8 @@ export default {
       intensity: 1.5,
     },
     grid: {
-      size: 0, //10000,
-      divisions: 0, //100,
+      size: 10000,
+      divisions: 100,
       colorCenterLine: 0xff0000,
       colorGrid: 0xffffff,
     },

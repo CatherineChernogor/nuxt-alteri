@@ -16,6 +16,7 @@ export default {
     const light = this.getThreeLight(this.light);
     const camera = this.getThreeCamera(this.camera);
     const model = this.modelPath;
+    
 
     return {
         scene_: scene,
@@ -121,13 +122,8 @@ export default {
         bgTexture.offset.y = aspect > 1 ? 0 : (1 - aspect) / 2;
         bgTexture.repeat.y = aspect > 1 ? 1 : aspect;
         scene.background = bgTexture;
-        //scene.background = new THREE.Color("white"); //#FFCCFE
 
-        //var renderer = new THREE.WebGLRenderer({
-        //  antialias: true,
-        //});
         this.renderer_.setSize(window.innerWidth, window.innerHeight);
-        //document.body.appendChild(renderer.domElement);
       }
 
       //controls

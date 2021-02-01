@@ -10,6 +10,9 @@
         разрабатывая новые подходы, на базе технологий
         смешанной и дополненной реальности.
       </div>
+      <div class="wrap-contact">
+      <contacts-inline />
+      </div>
     </div>
     <div class="item item2">
       <Layout />
@@ -18,7 +21,9 @@
 </template>
 
 <script>
-export default {};
+import ContactsInline from './ContactsInline.vue';
+export default {
+  components: { ContactsInline },};
 </script>
 
 <style lang="scss" scoped>
@@ -40,5 +45,8 @@ export default {};
   @include inherit;
   grid-auto-columns: 1;
   grid-auto-rows: 2;
+}
+.wrap-contact{
+  padding: 50px 50px 0px 20px;
 }
 </style>

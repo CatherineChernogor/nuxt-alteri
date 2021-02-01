@@ -18,7 +18,7 @@ export default {
     return {
       list: [
         "new experience",
-        "breaking boundaries between the world",
+        "breaking boundaries between the worlds",
         "стремимся к невозможному",
       ],
       next: 3,
@@ -57,6 +57,7 @@ export default {
 .button-head.heading {
   padding: 20px 30px;
   span {
+ 
     border: solid $mono3 2px;
     padding: 10px 20px;
   }

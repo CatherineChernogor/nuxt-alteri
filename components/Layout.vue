@@ -1,11 +1,11 @@
 <template>
-  <div class="layout" @mouseleave="leaveLayout" @mouseenter="enterLayout">
+  <div class="layout">
     <div class="premask">
       <Idea />
-      <ContactsInline />
+      <!-- <ContactsInline /> -->
     </div>
     <div class="mask">
-      <Team />
+      <!-- <Team /> -->
     </div>
   </div>
 </template>
@@ -56,6 +56,7 @@ export default {
   @include flexible;
   flex-direction: column;
   width: 100%;
+  min-width: 500px;
 }
 .layout {
   @include inherit;

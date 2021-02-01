@@ -1,25 +1,36 @@
 <template>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
-      
       <div class="carousel-item active">
         <Main />
       </div>
-      <div class="carousel-item ">
+      <div class="carousel-item">
         <ArStand />
       </div>
-      
+
       <div class="carousel-item">
         <ArLand />
       </div>
       <div class="carousel-item">
         <Virtual />
+      </div>
+      <div class="carousel-item">
+        <main-team />
       </div>
     </div>
     <a
@@ -44,7 +55,9 @@
 </template>
 
 <script>
-export default {};
+import MainTeam from './MainTeam.vue';
+export default {
+  components: { MainTeam },};
 </script>
 
 <style lang="scss" scoped>
@@ -91,6 +104,4 @@ export default {};
 .carousel-control-prev-icon:hover {
   background-image: url("../static/svg/arrow-prev-hover.svg");
 }
-
-
 </style>
